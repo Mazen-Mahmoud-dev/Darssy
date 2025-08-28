@@ -106,8 +106,6 @@ export default function Register() {
           id: userId,
           full_name: form.fullname,
           grade: form.grade,
-          phone: form.phone,
-          parent_phone: form.parentPhone,
           gender: form.gender,
           email: form.email,
           role:"student",
@@ -144,6 +142,7 @@ export default function Register() {
       dir="rtl"
       style={{ fontFamily: "var(--font-cairo)" }}
     >
+
       <section className="bg-white max-w-lg w-full p-[var(--spacing-card)] rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-6 text-[var(--color-primary)] text-center">
           تسجيل حساب جديد
@@ -182,8 +181,8 @@ export default function Register() {
             )}
           </div>
 
-          {/* صف دراسي صغير (full width small input) */}
-          <div className="relative w-1/2">
+          {/* الصف الدراسي */}
+          <div className="relative w-full md:w-1/2">
             <label
               htmlFor="grade"
               className="block mb-1 text-[var(--color-text-main)] font-semibold"
@@ -214,8 +213,8 @@ export default function Register() {
             )}
           </div>
 
-          {/* Two inputs side by side for phone and parent phone */}
-          <div className="flex gap-4">
+          {/* رقم الهاتف + رقم ولي الأمر */}
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <label
                 htmlFor="phone"
@@ -271,8 +270,8 @@ export default function Register() {
             </div>
           </div>
 
-          {/* Gender dropdown */}
-          <div className="relative w-1/2">
+          {/* الجنس */}
+          <div className="relative w-full md:w-1/2">
             <label
               htmlFor="gender"
               className="block mb-1 text-[var(--color-text-main)] font-semibold"
@@ -410,5 +409,6 @@ export default function Register() {
         </p>
       </section>
     </div>
+
   );
 }
