@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+@import "tailwindcss";
+/* 1) Import Arabic-friendly font (Google Fonts) */
+
+/* Define your design tokens as theme variables */
+@theme {
+  /* Colors */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-accent: #f59e0b;
+  --color-background: #f9fafb;
+  --color-text-main: #1f2937;
+  --color-text-muted: #6b7280;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+  --spacing-card: 2rem;
+
+  /* Font families */
+  --font-cairo: Cairo, sans-serif;
+}
+
+html {
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+}
+body{
+  background: var(--color-bg);
+  color: var(--color-text-main);
+}
