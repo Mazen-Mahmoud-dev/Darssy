@@ -29,7 +29,7 @@ export function VideoPlayer({ path }) {
       playerRef.current = videojs(videoRef.current, {
         controls: true,
         autoplay: false,
-        preload: "auto",
+        preload: "metadata",
         sources: [{ src: videoUrl, type: "video/mp4" }],
       });
       const controlBar = playerRef.current.getChild("controlBar");
@@ -64,7 +64,6 @@ export function VideoPlayer({ path }) {
         ref={videoRef}
         className="video-js vjs-big-play-centered vjs-theme-fantasy !w-full !h-[500px] cursor-pointer"
         controlsList="nodownload"
-        preload="metadata"
       />
     </div>
   );
