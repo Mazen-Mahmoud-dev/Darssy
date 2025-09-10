@@ -64,6 +64,7 @@ export function VideoPlayer({ path }) {
         ref={videoRef}
         className="video-js vjs-big-play-centered vjs-theme-fantasy !w-full !h-[500px] cursor-pointer"
         controlsList="nodownload"
+        preload="metadata"
       />
     </div>
   );
